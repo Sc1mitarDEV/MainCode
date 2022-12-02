@@ -4,6 +4,10 @@ local Window = Library.CreateLib("Doors 👁️ | Powered By Drx", "Serpent")
 local Tab1 = Window:NewTab("Home 📁")
 local Tab1Section = Tab1:NewSection("Information")
 
+local CF = CFrame.new
+local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
+local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
+
 local Tab2 = Window:NewTab("Main 🗡️")
 local Tab2Section = Tab2:NewSection("Main Section")
 
@@ -17,8 +21,28 @@ Tab2Section:NewButton("Auto Skip Level", "Very Good To Beat the game", function(
     loadstring(game:HttpGet("https://pastebin.com/raw/wH0ZLBTw", true))()
 end)
 
-Tab3Section:NewButton("No Jumpscare", "Avoid Jumpscare when death", function()
-    pcall(function()
+Tab3Section:NewButton("No Jumpscare", "Remove Any Monster Jumpscare", function()
             game:GetService("ReplicatedStorage").Bricks.Jumpscare:Destroy()
-        end)
-  	end
+print("done")
+  	end)
+
+Tab3Section:NewButton("No Screech", "Avoid Screech", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/8fHpugrg", true))()
+end)
+
+Tab3Section:NewToggle("ToggleText", "ToggleInfo", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/zG27uC8k", true))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/zG27uC8k", true))()
+    end
+end)
+
+--// Code starts here
+game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude > 0 then
+            game.Players.LocalPlayer.Character:TranslateBy(game.Players.LocalPlayer.Character.Humanoid.MoveDirection * TargetWalkspeed/50)
+        end
+    end)
+end)
