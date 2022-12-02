@@ -1,1 +1,24 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Doors 👁️ | Powered By Drx", "Serpent")
 
+local Tab1 = Window:NewTab("Home 📁")
+local Tab1Section = Tab1:NewSection("Information")
+
+local Tab2 = Window:NewTab("Main 🗡️")
+local Tab2Section = Tab2:NewSection("Main Section")
+
+local Tab3 = Window:NewTab("Visual 🧿")
+local Tab3Section = Tab3:NewSection("Visual Section")
+
+Tab2Section:NewButton("Skip level", "Very Usefull", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/7Hy8aFau", true))()
+end)
+Tab2Section:NewButton("Auto Skip Level", "Very Good To Beat the game", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/wH0ZLBTw", true))()
+end)
+
+Tab3Section:NewButton("No Jumpscare", "Avoid Jumpscare when death", function()
+    pcall(function()
+            game:GetService("ReplicatedStorage").Bricks.Jumpscare:Destroy()
+        end)
+  	end
