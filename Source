@@ -1,6 +1,10 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Doors 👁️ | Powered By Drx", "Serpent")
 
+local CF = CFrame.new
+local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
+local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
+
 local Tab1 = Window:NewTab("Home 📁")
 local Tab1Section = Tab1:NewSection("Information")
 
@@ -24,6 +28,7 @@ print("done")
 
 Tab3Section:NewButton("No Screech", "Avoid Screech", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/8fHpugrg", true))()
+print("done")
 end)
 
 Tab3Section:NewToggle("Key Cham", "Esp The Key", function(state)
