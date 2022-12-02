@@ -1,6 +1,10 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Doors 👁️ | Powered By Drx", "Serpent")
 
+if game.PlaceId == 6516141723 then
+    loadstring(game:HttpGet("https://pastebin.com/raw/PjVphyCu", true))()
+end
+
 local CF = CFrame.new
 local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
 local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
