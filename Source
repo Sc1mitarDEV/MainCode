@@ -30,15 +30,11 @@ Tab3Section:NewButton("No Screech", "Avoid Screech", function()
 end)
 
 Tab2Section:NewButton("Notify Rush", "Very Op XD", function()
-    workspace.ChildAdded:Connect(function(inst)
-        if inst.Name == "RushMoving" then
-                loadstring(game:HttpGet("https://pastebin.com/raw/1YfFvNms", true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/XE96EEnk", true))()
 end)
 
 Tab2Section:NewButton("Notify Ambush", "ButtonInfo", function()
- workspace.ChildAdded:Connect(function(inst)
-    inst.Name == "AmbushMoving" then
-                loadstring(game:HttpGet("https://pastebin.com/raw/qunZTGvD", true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/tvQRJkYM", true))()
 end)
 
 --// Code starts here
