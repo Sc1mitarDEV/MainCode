@@ -31,6 +31,18 @@ Tab3Section:NewButton("No Screech", "Avoid Screech", function()
 print("done")
 end)
 
+Tab2Section:NewButton("Notify Rush/Ambush", "Very Op XD", function()
+    workspace.ChildAdded:Connect(function(inst)
+        if inst.Name == "RushMoving" then
+                loadstring(game:HttpGet("https://pastebin.com/raw/1YfFvNms", true))()
+end
+elseif inst.Name == "AmbushMoving" then
+                loadstring(game:HttpGet("https://pastebin.com/raw/qunZTGvD", true))()
+            end
+        end
+    end)
+end)
+
 Tab3Section:NewToggle("Key Cham", "Esp The Key", function(state)
     if state then
         loadstring(game:HttpGet("https://pastebin.com/raw/zG27uC8k", true))()
@@ -46,9 +58,4 @@ game:GetService("RunService").RenderStepped:Connect(function()
             game.Players.LocalPlayer.Character:TranslateBy(game.Players.LocalPlayer.Character.Humanoid.MoveDirection * TargetWalkspeed/50)
         end
     end)
-end)
-
-workspace.ChildAdded:Connect(function(inst)
-        if inst.Name == "RushMoving" then
-                loadstring(game:HttpGet("https://pastebin.com/raw/1YfFvNms", true))()
 end)
