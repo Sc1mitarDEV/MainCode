@@ -3,7 +3,7 @@ local Window = Library.CreateLib("Doors 👁️ | Powered By Drx", "Serpent")
 
 if game.PlaceId == 6516141723 then
     loadstring(game:HttpGet("https://pastebin.com/raw/PjVphyCu", true))()
-end
+end)
 
 local CF = CFrame.new
 local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
