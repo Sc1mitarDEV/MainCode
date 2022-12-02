@@ -22,13 +22,11 @@ Tab2Section:NewButton("Auto Skip Level", "Very Good To Beat the game", function(
 end)
 
 Tab3Section:NewButton("No Jumpscare", "Remove Any Monster Jumpscare", function()
-            game:GetService("ReplicatedStorage").Bricks.Jumpscare:Destroy()
-print("done")
-  	end)
+    game:GetService("ReplicatedStorage").Bricks.Jumpscare:Destroy()
+end)
 
 Tab3Section:NewButton("No Screech", "Avoid Screech", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/8fHpugrg", true))()
-print("done")
 end)
 
 Tab2Section:NewButton("Notify Rush/Ambush", "Very Op XD", function()
@@ -40,15 +38,6 @@ elseif inst.Name == "AmbushMoving" then
                 loadstring(game:HttpGet("https://pastebin.com/raw/qunZTGvD", true))()
             end
         end
-    end)
-end)
-
-Tab3Section:NewToggle("Key Cham", "Esp The Key", function(state)
-    if state then
-        loadstring(game:HttpGet("https://pastebin.com/raw/zG27uC8k", true))()
-    else
-        loadstring(game:HttpGet("https://pastebin.com/raw/zG27uC8k", true))()
-    end
 end)
 
 --// Code starts here
