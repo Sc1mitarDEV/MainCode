@@ -1,10 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Doors 👁️ | Powered By Drx", "Serpent")
 
-local CF = CFrame.new
-local LatestRoom = game:GetService("ReplicatedStorage").GameData.LatestRoom
-local ChaseStart = game:GetService("ReplicatedStorage").GameData.ChaseStart
-
 local Tab1 = Window:NewTab("Home 📁")
 local Tab1Section = Tab1:NewSection("Information")
 
