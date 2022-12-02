@@ -39,6 +39,10 @@ Tab3Section:NewToggle("Key Cham", "Esp The Key", function(state)
     end
 end)
 
+Tab3Section:NewButton("Notify when mob spawns", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/xmDSdqpq", true))()
+end)
+
 --// Code starts here
 game:GetService("RunService").RenderStepped:Connect(function()
     pcall(function()
@@ -47,3 +51,15 @@ game:GetService("RunService").RenderStepped:Connect(function()
         end
     end)
 end)
+
+workspace.ChildAdded:Connect(function(inst)
+        if inst.Name == "RushMoving" and print("done") then
+                wait(0.3)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Rush Spawn";
+Text = "Quick Find a Closet and hide"
+Icon = "rbxassetid://57254792"
+Duration = 5;
+})
+
+            end
